@@ -63,7 +63,6 @@ O ESMAEL.IAS organiza o processo de aprendizagem em etapas objetivas:
 - Integração de estudo guiado + prática + recomendação de ferramentas.
 - UX pensada para reduzir fricção de iniciantes.
 ## Preview (Screenshots)
-> Recomenda-se armazenar as imagens em `assets/screenshots/`.
 ### Home
 ![Home](assets/screenshots/home.png)
 ### Diagnóstico e Trilha
