@@ -111,7 +111,7 @@ Contribuição
 Contribuições são bem-vindas.
 Sugestões de melhoria podem ser enviadas via Issues e Pull Requests.
 
-Equipe de desenvolvimento
-Kauã Felype
-Marina Feitoza
+Equipe de desenvolvimento:
+Kauã Felype,
+Marina Feitoza,
 Pedro César
