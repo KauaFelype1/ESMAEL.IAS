@@ -1,91 +1,81 @@
-ESMAEL.IAS
+# ESMAEL.IAS
 Plataforma educacional web para aprendizado de programação com diagnóstico de nível, trilha adaptativa por linguagem, conteúdo didático progressivo, treino prático com feedback e hub de recomendações de IAs e criadores de conteúdo.
-
-Status Frontend Licença
-
-Sobre o projeto
-O ESMAEL.IAS foi criado para tornar o aprendizado de programação mais orientado e eficiente.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-7c3aed)
+![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-10b981)
+![Licença](https://img.shields.io/badge/licença-MIT-blue)
+## Sobre o projeto
+O **ESMAEL.IAS** foi criado para tornar o aprendizado de programação mais orientado e eficiente.  
 Em vez de oferecer conteúdo genérico, a plataforma identifica o perfil inicial do usuário e entrega uma trilha mais coerente com seu nível, com foco em prática e evolução contínua.
-
-Problema que o projeto resolve
+## Problema que o projeto resolve
 Muitos iniciantes travam por:
-
-excesso de conteúdo sem ordem clara;
-dificuldade em saber o que estudar primeiro;
-pouca prática aplicada com feedback imediato.
+- excesso de conteúdo sem ordem clara;
+- dificuldade em saber o que estudar primeiro;
+- pouca prática aplicada com feedback imediato.
 O ESMAEL.IAS organiza o processo de aprendizagem em etapas objetivas:
-
-Diagnosticar;
-Ensinar com progressão;
-Praticar;
-Reforçar com recursos externos de qualidade.
-Funcionalidades principais
-Diagnóstico inicial inteligente
-
-Questionário para classificar o nível do usuário.
-Trilha adaptativa
-
-Módulos e aulas ajustados para:
-Iniciante
-Intermediário
-Avançado
-Aulas por linguagem
-
-Explicações, exemplos e mini-quizzes no contexto da linguagem escolhida.
-Mini-quiz com confirmação
-
-O usuário seleciona a resposta e confirma antes de receber feedback.
-Conclusão de trilha
-
-Ao finalizar os módulos, o sistema exibe mensagem de conquista e oferece próximos passos.
-Modo treino
-
-Ambiente para praticar exercícios com dinâmica de execução/feedback.
-Página de recomendações
-
-Melhores IAs para programação e melhores canais de conteúdo com links diretos.
-Linguagens suportadas
-Python
-JavaScript
-Java
-C
-C++
-C#
-Stack e arquitetura
-Tecnologias
-HTML5
-CSS3
-JavaScript (Vanilla)
-Organização do projeto
-index.html — landing + entrada para trilhas
-pages/aprender.html — diagnóstico + conteúdo adaptativo
-pages/treino.html — prática
-pages/ias.html — recomendações externas
-css/ — estilos por página e estilo global
-js/ — scripts de interação e lógica de aprendizado
-Decisões técnicas
-Estrutura modular por página para facilitar manutenção.
-Conteúdo e renderização orientados por estado no front-end.
-Foco em experiência visual, feedback instantâneo e clareza pedagógica.
-Diferenciais
-Progressão orientada por nível (não linear e genérica).
-Conteúdo em português com abordagem didática.
-Integração de estudo guiado + prática + recomendação de ferramentas.
-UX pensada para reduzir fricção de iniciantes.
-Preview (Screenshots)
-Recomenda-se armazenar as imagens em assets/screenshots/.
-
-Home
-Home
-Diagnóstico e Trilha
-Diagnóstico
-Aula + Mini-Quiz
-Aula e Quiz
-Modo Treino
-Treino
-Hub de IAs e Youtubers
-IAs e Youtubers
-Como executar localmente
+1. Diagnosticar
+2. Ensinar com progressão
+3. Praticar
+4. Reforçar com recursos externos de qualidade
+## Funcionalidades principais
+- **Diagnóstico inicial inteligente**
+  - Questionário para classificar o nível do usuário.
+- **Trilha adaptativa**
+  - Módulos e aulas ajustados para:
+    - Iniciante
+    - Intermediário
+    - Avançado
+- **Aulas por linguagem**
+  - Explicações, exemplos e mini-quizzes no contexto da linguagem escolhida.
+- **Mini-quiz com confirmação**
+  - O usuário seleciona a resposta e confirma antes de receber feedback.
+- **Conclusão de trilha**
+  - Ao finalizar os módulos, o sistema exibe mensagem de conquista e oferece próximos passos.
+- **Modo treino**
+  - Ambiente para praticar exercícios com dinâmica de execução/feedback.
+- **Página de recomendações**
+  - Melhores IAs para programação e melhores canais de conteúdo com links diretos.
+## Linguagens suportadas
+- Python
+- JavaScript
+- Java
+- C
+- C++
+- C#
+## Stack e arquitetura
+### Tecnologias
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+### Organização do projeto
+- `index.html` — landing + entrada para trilhas
+- `pages/aprender.html` — diagnóstico + conteúdo adaptativo
+- `pages/treino.html` — prática
+- `pages/ias.html` — recomendações externas
+- `css/` — estilos por página e estilo global
+- `js/` — scripts de interação e lógica de aprendizado
+### Decisões técnicas
+- Estrutura modular por página para facilitar manutenção.
+- Conteúdo e renderização orientados por estado no front-end.
+- Foco em experiência visual, feedback instantâneo e clareza pedagógica.
+## Diferenciais
+- Progressão orientada por nível (não linear e genérica).
+- Conteúdo em português com abordagem didática.
+- Integração de estudo guiado + prática + recomendação de ferramentas.
+- UX pensada para reduzir fricção de iniciantes.
+## Preview (Screenshots)
+> Recomenda-se armazenar as imagens em `assets/screenshots/`.
+### Home
+![Home](assets/screenshots/home.png)
+### Diagnóstico e Trilha
+![Diagnóstico](assets/screenshots/aprender.png)
+### Aula + Mini-Quiz
+![Aula e Quiz](assets/screenshots/aula-quiz.png)
+### Modo Treino
+![Treino](assets/screenshots/treino.png)
+### Hub de IAs e Youtubers
+![IAs e Youtubers](assets/screenshots/ias.png)
+## Como executar localmente
+```bash
 # 1) Clone
 git clone <URL_DO_REPOSITORIO>
 # 2) Entre na pasta
@@ -111,7 +101,7 @@ Contribuição
 Contribuições são bem-vindas.
 Sugestões de melhoria podem ser enviadas via Issues e Pull Requests.
 
-Equipe de desenvolvimento:
-Kauã Felype,
-Marina Feitoza,
+Equipe de desenvolvimento
+Kauã Felype
+Marina Feitoza
 Pedro César
