@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treino — ESMAEL.IAS</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/treino.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="treino-page">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">ESMAEL.IAS</span>
+      <span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <div class="treino-nav-center">
+      <!-- SELETOR DE LINGUAGEM -->
+      <div class="lang-selector" id="langSelector">
+        <button class="ls-btn active" data-lang="python">Python</button>
+        <button class="ls-btn" data-lang="javascript">JavaScript</button>
+        <button class="ls-btn" data-lang="java">Java</button>
+        <button class="ls-btn" data-lang="c">C</button>
+        <button class="ls-btn" data-lang="cpp">C++</button>
+        <button class="ls-btn" data-lang="csharp">C#</button>
+      </div>
+    </div>
+
+    <a href="../index.html" class="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Voltar
+    </a>
+  </nav>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <main class="treino-main">
+
+    <!-- PAINEL ESQUERDO: EXERCÍCIO -->
+    <aside class="exercise-panel" id="exercisePanel">
+
+      <div class="ep-header">
+        <div class="ep-meta">
+          <span class="ep-tag" id="epTag">// exercício</span>
+          <div class="ep-badges">
+            <span class="difficulty-badge" id="diffBadge">Fácil</span>
+            <span class="xp-badge" id="xpBadge">+10 XP</span>
+          </div>
+        </div>
+        <h2 class="ep-title" id="epTitle">Olá, Mundo!</h2>
+        <p class="ep-desc" id="epDesc">Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.</p>
+      </div>
+
+      <!-- EXEMPLOS -->
+      <div class="ep-section">
+        <div class="ep-section-title">Exemplo de saída esperada:</div>
+        <div class="ep-output-example" id="epOutput">
+          <span class="eoe-label">OUTPUT</span>
+          <code id="epOutputCode">Olá, Mundo!</code>
+        </div>
+      </div>
+
+      <!-- DICAS -->
+      <div class="ep-section">
+        <button class="hint-toggle" id="hintToggle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Ver dica
+        </button>
+        <div class="hint-box hidden" id="hintBox">
+          <p id="hintText">Use o comando de saída da linguagem para exibir texto.</p>
+        </div>
+      </div>
+
+      <!-- LISTA DE EXERCÍCIOS -->
+      <div class="ep-section">
+        <div class="ep-section-title">Exercícios desta trilha:</div>
+        <div class="exercise-list" id="exerciseList">
+          <!-- gerado pelo JS -->
+        </div>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="ep-progress">
+        <div class="epp-label">
+          <span>Progresso</span>
+          <span id="eppPercent">0%</span>
+        </div>
+        <div class="epp-track">
+          <div class="epp-fill" id="eppFill"></div>
+        </div>
+        <div class="epp-stats">
+          <span id="eppDone">0</span> de <span id="eppTotal">0</span> concluídos
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- PAINEL DIREITO: EDITOR + OUTPUT -->
+    <div class="editor-panel">
+
+      <!-- TOPBAR DO EDITOR -->
+      <div class="editor-topbar">
+        <div class="etb-left">
+          <div class="file-tab active" id="fileTab">
+            <span class="ft-dot"></span>
+            <span id="fileTabName">main.py</span>
+          </div>
+        </div>
+        <div class="etb-right">
+          <button class="etb-btn" id="resetBtn" title="Resetar código">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            Reset
+          </button>
+          <button class="etb-btn run-btn" id="runBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+            Executar
+          </button>
+        </div>
+      </div>
+
+      <!-- EDITOR DE CÓDIGO -->
+      <div class="editor-wrapper">
+        <!-- NÚMEROS DE LINHA -->
+        <div class="line-numbers" id="lineNumbers">
+          <span>1</span>
+        </div>
+        <!-- ÁREA DE CÓDIGO -->
+        <div class="code-area-wrapper">
+          <textarea
+            class="code-editor"
+            id="codeEditor"
+            spellcheck="false"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            placeholder="// Escreva seu código aqui..."
+          ></textarea>
+          <div class="code-highlight" id="codeHighlight" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- PAINEL DE OUTPUT -->
+      <div class="output-panel" id="outputPanel">
+        <div class="op-header">
+          <div class="op-tabs">
+            <button class="op-tab active" data-tab="output">Output</button>
+            <button class="op-tab" data-tab="feedback">Feedback</button>
+          </div>
+          <div class="op-status" id="opStatus">
+            <span class="status-dot idle"></span>
+            <span id="statusText">Pronto</span>
+          </div>
+        </div>
+
+        <div class="op-content">
+          <div class="op-pane active" id="paneOutput">
+            <div class="output-lines" id="outputLines">
+              <div class="output-welcome">
+                <span class="ow-icon">▶</span>
+                <span>Execute seu código para ver o resultado aqui</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="op-pane" id="paneFeedback">
+            <div class="feedback-content" id="feedbackContent">
+              <div class="output-welcome">
+                <span class="ow-icon">💬</span>
+                <span>O feedback aparecerá após a execução</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /editor-panel -->
+
+  </main>
+
+  <!-- MODAL DE SUCESSO -->
+  <div class="success-modal hidden" id="successModal">
+    <div class="sm-card">
+      <div class="sm-icon">🎉</div>
+      <h2 class="sm-title">Exercício Concluído!</h2>
+      <p class="sm-sub" id="smSub">Parabéns! Seu código está correto.</p>
+      <div class="sm-xp" id="smXp">+10 XP</div>
+      <div class="sm-actions">
+        <button class="sm-btn primary" id="smNext">Próximo Exercício →</button>
+        <button class="sm-btn ghost" id="smClose">Continuar aqui</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay hidden" id="modalOverlay"></div>
+
+  <div class="site-credits">Desenvolvido por Kauã Felype, Marina Feitoza e Pedro César</div>
+
+  <script src="../js/treino.js"></script>
+</body>
+</html>

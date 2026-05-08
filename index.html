@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESMAEL.IAS — Aprenda a Programar</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR CUSTOMIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- PARTÍCULAS DE FUNDO -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">ESMAEL.IAS</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="nav-link active">Início</a></li>
+      <li><a href="#linguagens" class="nav-link">Linguagens</a></li>
+      <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="pages/ias.html" class="nav-link">IAs</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Plataforma de Ensino Interativa
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Aprenda</span>
+        <span class="title-line accent">Lógica de</span>
+        <span class="title-line">Programação</span>
+      </h1>
+      <p class="hero-subtitle">
+        Escolha sua linguagem, responda algumas perguntas e deixe o sistema
+        criar uma trilha de aprendizado <em>feita só para você</em>.
+      </p>
+      <div class="hero-actions">
+        <a href="#linguagens" class="btn btn-primary">
+          <span>Começar Agora</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sobre" class="btn btn-ghost">Saiba mais</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Linguagens</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Exercícios</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Possibilidades</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMINAL DECORATIVO -->
+    <div class="hero-visual">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="t-btn t-red"></span>
+          <span class="t-btn t-yellow"></span>
+          <span class="t-btn t-green"></span>
+          <span class="t-title">codelearn.py</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="t-line"><span class="t-comment"># Bem-vindo ao ESMAEL.IAS!</span></div>
+          <div class="t-line"><span class="t-keyword">def</span> <span class="t-fn">aprender</span>(<span class="t-param">linguagem</span>):</div>
+          <div class="t-line t-indent"><span class="t-string">"Sua jornada começa aqui"</span></div>
+          <div class="t-line t-indent"><span class="t-keyword">return</span> <span class="t-fn">trilha_personalizada</span>()</div>
+          <div class="t-line">&nbsp;</div>
+          <div class="t-line"><span class="t-fn">aprender</span>(<span class="t-string">"Python"</span>)</div>
+          <div class="t-line t-output"><span class="t-arrow">→</span> <span class="t-success" id="terminalOutput">Iniciando aprendizado...</span></div>
+          <div class="t-cursor">█</div>
+        </div>
+      </div>
+
+      <!-- FLOATING TAGS -->
+      <div class="float-tag ft1"><span>{</span> Java <span>}</span></div>
+      <div class="float-tag ft2"><span>#</span> Python</div>
+      <div class="float-tag ft3"><span>*</span> C++</div>
+      <div class="float-tag ft4"><span>;</span> C#</div>
+    </div>
+  </section>
+
+  <!-- LINGUAGENS -->
+  <section class="languages-section" id="linguagens">
+    <div class="section-header">
+      <p class="section-tag">// escolha sua trilha</p>
+      <h2 class="section-title">Linguagens Disponíveis</h2>
+      <p class="section-desc">Selecione uma ou mais linguagens para iniciar sua jornada. Você pode aprender quantas quiser!</p>
+    </div>
+
+    <div class="languages-grid">
+
+      <div class="lang-card" data-lang="java" data-color="#f89820">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0 0-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.543 1.644-2.469 6.197-3.665 5.19-7.623M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">Java</h3>
+          <p class="lang-desc">Orientação a objetos, robustez e versatilidade para aplicações enterprise.</p>
+          <div class="lang-tags">
+            <span>OOP</span><span>Enterprise</span><span>Android</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-text">Complexidade Média</span>
+        </div>
+        <a href="pages/aprender.html?lang=java" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="lang-card" data-lang="python" data-color="#3776ab">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.21-.01h5.98l.69-.05.59-.14.5-.22.41-.27.33-.32.27-.35.2-.36.15-.37.1-.35.07-.32.04-.27.02-.21V2.53l.04-.21.1-.35.15-.37.2-.36.27-.35.33-.32.41-.27.5-.22.59-.14.69-.05h2.7zM9.64 3.9a1.23 1.23 0 0 0-1.22 1.22 1.23 1.23 0 0 0 1.22 1.22 1.23 1.23 0 0 0 1.22-1.22A1.23 1.23 0 0 0 9.64 3.9zM24 12.03l-.06 1.22-.16 1.04-.24.87-.32.71-.36.57-.4.44-.42.33-.42.24-.4.16-.36.1-.32.05-.26.02-.21.01h-5.98l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.29h-2.7l-.69-.05-.59-.14-.5-.22-.41-.27-.33-.32-.27-.35-.2-.36-.15-.37-.1-.35-.07-.32-.04-.27-.02-.21V15.5l.05-.63.13-.55.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.07.26-.04.21-.02H15.17l.69-.05.59-.14.5-.22.41-.27.33-.32.27-.35.2-.36.15-.37.1-.35.07-.32.04-.27.02-.21V8.5l-.04-.21-.1-.35-.15-.37-.2-.36-.27-.35-.33-.32-.41-.27-.5-.22-.59-.14-.69-.05h-2.7l-.9-.2-.73-.26-.59-.3-.45-.32-.34-.34-.25-.34-.16-.33-.1-.3-.04-.26-.02-.2.01-.13V.92l.05-.63.13-.55.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.07.26-.04.21-.02H15.17l.69.05.59.14.5.22.41.27.33.32.27.35.2.36.15.37.1.35.07.32.04.27.02.21V8.5zm-4.61 8.14a1.23 1.23 0 0 0-1.22 1.22 1.23 1.23 0 0 0 1.22 1.22 1.23 1.23 0 0 0 1.22-1.22 1.23 1.23 0 0 0-1.22-1.22z"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">Python</h3>
+          <p class="lang-desc">A linguagem mais popular para iniciantes. Simples, poderosa e versátil.</p>
+          <div class="lang-tags">
+            <span>IA/ML</span><span>Data Science</span><span>Web</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot active"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-text">Ideal para Iniciantes</span>
+        </div>
+        <a href="pages/aprender.html?lang=python" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="lang-card" data-lang="c" data-color="#a8b9cc">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.394 2.111a1.042 1.042 0 0 0-.466.218l-8.5 5.917A1.042 1.042 0 0 0 7 9.125v5.75a1.042 1.042 0 0 0 .428.878l8.5 5.917a1.042 1.042 0 0 0 1.172 0l1-.696a1.042 1.042 0 0 0 .4-1.182 1.042 1.042 0 0 0-.986-.707 1.042 1.042 0 0 0-.586.18L12 21.104 9.083 19.07V4.93L12 2.896l4.928 3.429a1.042 1.042 0 0 0 .586.18 1.042 1.042 0 0 0 .986-.707 1.042 1.042 0 0 0-.4-1.182l-1-.696a1.042 1.042 0 0 0-.706-.209z"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">C</h3>
+          <p class="lang-desc">A base de tudo. Entenda como os computadores realmente funcionam.</p>
+          <div class="lang-tags">
+            <span>Sistemas</span><span>Baixo Nível</span><span>Embedded</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot active"></span>
+          <span class="level-text">Avançado</span>
+        </div>
+        <a href="pages/aprender.html?lang=c" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="lang-card" data-lang="cpp" data-color="#00599c">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.394 6c-.167-.29-.38-.543-.63-.7L12.924.3c-.501-.3-1.351-.3-1.852 0L2.227 5.3c-.5.298-.855.808-.855 1.4v10c0 .593.354 1.102.855 1.4l8.845 5c.5.298 1.35.298 1.85 0l8.845-5c.5-.298.855-.808.855-1.4V6.7c.002-.203-.045-.405-.128-.7zM13 14.574v2.323l-1 .576-1-.576v-2.323l-2.016-1.165.008-1.152L11 13.422V11.1l-2.024-1.172.016-1.147L11 9.953V7.63l2 1.155 2-1.155v2.322l2.008 1.228.016 1.147L15 11.1v2.323l2.008 1.164.008 1.152L13 14.574z"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">C++</h3>
+          <p class="lang-desc">Poder e performance extrema. A escolha para games e sistemas críticos.</p>
+          <div class="lang-tags">
+            <span>Games</span><span>Performance</span><span>OOP</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot active"></span>
+          <span class="level-text">Avançado</span>
+        </div>
+        <a href="pages/aprender.html?lang=cpp" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="lang-card" data-lang="javascript" data-color="#f7df1e">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">JavaScript</h3>
+          <p class="lang-desc">A linguagem da web. Crie desde sites interativos a aplicações completas.</p>
+          <div class="lang-tags">
+            <span>Front-end</span><span>Back-end</span><span>Web</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot active"></span>
+          <span class="level-dot"></span>
+          <span class="level-dot"></span>
+          <span class="level-text">Amigável</span>
+        </div>
+        <a href="pages/aprender.html?lang=javascript" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="lang-card" data-lang="csharp" data-color="#239120">
+        <div class="lang-card-bg"></div>
+        <div class="lang-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0zm-.612 5.996c1.655 0 3.135.572 4.28 1.512l-1.723 1.723c-.657-.497-1.475-.81-2.378-.81-2.154 0-3.9 1.738-3.9 3.88 0 2.14 1.746 3.88 3.9 3.88.927 0 1.77-.32 2.433-.845l1.723 1.722c-1.132.965-2.632 1.55-4.335 1.55-3.563 0-6.451-2.882-6.451-6.44 0-3.555 2.888-6.172 6.451-6.172zm5.898 4.824h1.03v1.028h1.028v1.028h-1.028v1.028h-1.03V12.876h-1.028V11.848h1.028V10.82zm3.086 0h1.028v1.028h1.03v1.028h-1.03v1.028H20.37V12.876h-1.028V11.848h1.028V10.82z"/></svg>
+        </div>
+        <div class="lang-info">
+          <h3 class="lang-name">C#</h3>
+          <p class="lang-desc">Elegante e moderno. Ideal para desenvolvimento com .NET e Unity.</p>
+          <div class="lang-tags">
+            <span>.NET</span><span>Unity</span><span>Desktop</span>
+          </div>
+        </div>
+        <div class="lang-level">
+          <span class="level-dot"></span>
+          <span class="level-dot active"></span>
+          <span class="level-dot"></span>
+          <span class="level-text">Intermediário</span>
+        </div>
+        <a href="pages/aprender.html?lang=csharp" class="lang-btn">
+          Iniciar <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE / FEATURES -->
+  <section class="about-section" id="sobre">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-tag">// como funciona</p>
+        <h2 class="section-title">Uma plataforma que<br><em>se adapta a você</em></h2>
+        <p class="about-desc">
+          O ESMAEL.IAS avalia seu nível atual e monta uma trilha personalizada.
+          Não importa se você nunca viu código ou se já tem experiência —
+          o sistema encontra o ponto certo para você evoluir.
+        </p>
+        <ul class="feature-list">
+          <li>
+            <span class="feat-icon">◈</span>
+            <div>
+              <strong>Diagnóstico Inteligente</strong>
+              <p>Algumas perguntas rápidas e o sistema entende o seu nível</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">◈</span>
+            <div>
+              <strong>Conteúdo Personalizado</strong>
+              <p>Do básico ao avançado, na velocidade certa para você</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">◈</span>
+            <div>
+              <strong>Prática com Feedback Real</strong>
+              <p>Escreva código diretamente no site e veja se funciona</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">◈</span>
+            <div>
+              <strong>Múltiplas Linguagens</strong>
+              <p>Aprenda quantas linguagens quiser, sem limite</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-visual">
+        <div class="path-visual">
+          <div class="path-node active">
+            <div class="path-icon">?</div>
+            <span>Diagnóstico</span>
+          </div>
+          <div class="path-line"></div>
+          <div class="path-node">
+            <div class="path-icon">📚</div>
+            <span>Trilha Criada</span>
+          </div>
+          <div class="path-line"></div>
+          <div class="path-node">
+            <div class="path-icon">💻</div>
+            <span>Prática</span>
+          </div>
+          <div class="path-line"></div>
+          <div class="path-node">
+            <div class="path-icon">🏆</div>
+            <span>Domínio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title">Pronto para começar?</h2>
+      <p class="cta-sub">Escolha uma linguagem e inicie sua jornada hoje mesmo. É gratuito.</p>
+      <a href="#linguagens" class="btn btn-primary btn-large">
+        <span>Escolher Linguagem</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="cta-code">
+      <span class="cc-line"><span class="cc-kw">while</span> (<span class="cc-bool">true</span>) {</span>
+      <span class="cc-line cc-ind">aprender();</span>
+      <span class="cc-line cc-ind">evoluir();</span>
+      <span class="cc-line">}</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">ESMAEL.IAS</span>
+        <span class="logo-bracket">/&gt;</span>
+        <p>Aprenda. Pratique. Domine.</p>
+      </div>
+      <div class="footer-links">
+        <a href="pages/ias.html">IAs para Programar</a>
+        <a href="#linguagens">Linguagens</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ESMAEL.IAS — Feito para quem quer aprender de verdade.</p>
+    </div>
+  </footer>
+
+  <div class="site-credits">Desenvolvido por Kauã Felype, Marina Feitoza e Pedro César</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprender — ESMAEL.IAS</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/aprender.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="learn-page">
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAVBAR SIMPLES -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">ESMAEL.IAS</span>
+      <span class="logo-bracket">/&gt;</span>
+    </a>
+    <div class="nav-lang-badge" id="navLangBadge">
+      <span class="badge-dot"></span>
+      <span id="navLangName">Carregando...</span>
+    </div>
+    <a href="../index.html" class="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Voltar
+    </a>
+  </nav>
+
+  <!-- WRAPPER PRINCIPAL -->
+  <main class="learn-main" id="learnMain">
+
+    <!-- ===================== FASE 1: DIAGNÓSTICO ===================== -->
+    <div class="phase" id="phaseDiag" data-phase="diag">
+      <div class="diag-container">
+
+        <div class="diag-header">
+          <div class="phase-tag">// diagnóstico inicial</div>
+          <h1 class="diag-title">Vamos te conhecer<br><em class="diag-accent">melhor</em></h1>
+          <p class="diag-sub">Responda algumas perguntas rápidas para que possamos montar a trilha de aprendizado ideal para você.</p>
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="diag-progress">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-label" id="progressLabel">1 de 5</span>
+        </div>
+
+        <!-- PERGUNTAS -->
+        <div class="questions-wrapper" id="questionsWrapper">
+
+          <!-- Q1 -->
+          <div class="question-card active" data-q="1">
+            <div class="q-number">01</div>
+            <h2 class="q-text">Você já teve algum contato com programação antes?</h2>
+            <div class="q-options">
+              <button class="q-opt" data-value="nunca" data-q="1">
+                <span class="opt-icon">🌱</span>
+                <div class="opt-text">
+                  <strong>Nunca programei</strong>
+                  <span>Sou completamente iniciante</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="pouco" data-q="1">
+                <span class="opt-icon">📖</span>
+                <div class="opt-text">
+                  <strong>Vi por cima</strong>
+                  <span>Já ouvi falar, vi alguns tutoriais</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="medio" data-q="1">
+                <span class="opt-icon">💡</span>
+                <div class="opt-text">
+                  <strong>Tenho alguma base</strong>
+                  <span>Sei o básico, já escrevi algum código</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="experiente" data-q="1">
+                <span class="opt-icon">🚀</span>
+                <div class="opt-text">
+                  <strong>Tenho experiência</strong>
+                  <span>Já programo em outra linguagem</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="question-card" data-q="2">
+            <div class="q-number">02</div>
+            <h2 class="q-text">O que é uma variável na programação?</h2>
+            <p class="q-hint">// Escolha a opção que melhor descreve</p>
+            <div class="q-options">
+              <button class="q-opt" data-value="errado1" data-q="2">
+                <span class="opt-letter">A</span>
+                <div class="opt-text">
+                  <strong>Um tipo especial de função</strong>
+                  <span>Que executa tarefas repetidas</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="certo" data-q="2">
+                <span class="opt-letter">B</span>
+                <div class="opt-text">
+                  <strong>Um espaço na memória para guardar dados</strong>
+                  <span>Como uma caixinha com um nome e um valor</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="errado2" data-q="2">
+                <span class="opt-letter">C</span>
+                <div class="opt-text">
+                  <strong>Um comando para exibir texto</strong>
+                  <span>Como print() ou console.log()</span>
+                </div>
+              </button>
+              <button class="q-opt" data-value="errado3" data-q="2">
+                <span class="opt-icon">🤷</span>
+                <div class="opt-text">
+                  <strong>Não sei</strong>
+                  <span>Ainda não aprendi isso</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="question-card" data-q="3">
+            <div class="q-number">03</div>
+            <h2 class="q-text">Você conhece algum desses conceitos?</h2>
+            <p class="q-hint">// Marque todos que você já ouviu falar</p>
+            <div class="q-options q-multi">
+              <button class="q-opt multi" data-value="condicional" data-q="3">
+                <span class="opt-check">☐</span>
+                <div class="opt-text"><strong>Condicionais</strong><span>if / else</span></div>
+              </button>
+              <button class="q-opt multi" data-value="loop" data-q="3">
+                <span class="opt-check">☐</span>
+                <div class="opt-text"><strong>Loops / Laços</strong><span>for / while</span></div>
+              </button>
+              <button class="q-opt multi" data-value="funcao" data-q="3">
+                <span class="opt-check">☐</span>
+                <div class="opt-text"><strong>Funções</strong><span>def / function</span></div>
+              </button>
+              <button class="q-opt multi" data-value="oop" data-q="3">
+                <span class="opt-check">☐</span>
+                <div class="opt-text"><strong>Orientação a Objetos</strong><span>Classes e instâncias</span></div>
+              </button>
+              <button class="q-opt multi" data-value="nenhum" data-q="3" id="nenhum-opt">
+                <span class="opt-check">☐</span>
+                <div class="opt-text"><strong>Nenhum dos acima</strong><span>Sou bem iniciante</span></div>
+              </button>
+            </div>
+            <button class="q-next-btn" id="q3Next" disabled>Continuar →</button>
+          </div>
+
+          <!-- Q4 -->
+          <div class="question-card" data-q="4">
+            <div class="q-number">04</div>
+            <h2 class="q-text">Qual é o seu objetivo ao aprender programação?</h2>
+            <div class="q-options">
+              <button class="q-opt" data-value="curiosidade" data-q="4">
+                <span class="opt-icon">🔍</span>
+                <div class="opt-text"><strong>Curiosidade</strong><span>Quero entender como funciona</span></div>
+              </button>
+              <button class="q-opt" data-value="carreira" data-q="4">
+                <span class="opt-icon">💼</span>
+                <div class="opt-text"><strong>Carreira</strong><span>Quero trabalhar como dev</span></div>
+              </button>
+              <button class="q-opt" data-value="projeto" data-q="4">
+                <span class="opt-icon">🛠️</span>
+                <div class="opt-text"><strong>Projeto pessoal</strong><span>Tenho uma ideia que quero criar</span></div>
+              </button>
+              <button class="q-opt" data-value="academico" data-q="4">
+                <span class="opt-icon">🎓</span>
+                <div class="opt-text"><strong>Acadêmico</strong><span>Preciso para a faculdade / escola</span></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="question-card" data-q="5">
+            <div class="q-number">05</div>
+            <h2 class="q-text">Quanto tempo por semana você pode dedicar?</h2>
+            <div class="q-options">
+              <button class="q-opt" data-value="pouco" data-q="5">
+                <span class="opt-icon">⏱️</span>
+                <div class="opt-text"><strong>Menos de 2h</strong><span>No meu tempo livre</span></div>
+              </button>
+              <button class="q-opt" data-value="medio" data-q="5">
+                <span class="opt-icon">📅</span>
+                <div class="opt-text"><strong>2 a 5 horas</strong><span>Tenho um ritmo consistente</span></div>
+              </button>
+              <button class="q-opt" data-value="muito" data-q="5">
+                <span class="opt-icon">🔥</span>
+                <div class="opt-text"><strong>Mais de 5 horas</strong><span>Estou focado nisso agora</span></div>
+              </button>
+            </div>
+          </div>
+
+        </div><!-- /questions-wrapper -->
+      </div><!-- /diag-container -->
+    </div><!-- /phaseDiag -->
+
+    <!-- ===================== FASE 2: RESULTADO + TRILHA ===================== -->
+    <div class="phase hidden" id="phaseResult" data-phase="result">
+      <div class="result-container">
+
+        <div class="result-header">
+          <div class="result-badge" id="resultBadge">🌱 Iniciante</div>
+          <h1 class="result-title" id="resultTitle">Sua trilha está pronta!</h1>
+          <p class="result-sub" id="resultSub">Vamos começar do começo, construindo uma base sólida.</p>
+        </div>
+
+        <div class="trail-overview" id="trailOverview">
+          <!-- gerado pelo JS -->
+        </div>
+
+        <button class="btn btn-primary btn-large start-learn-btn" id="startLearnBtn">
+          <span>Começar a Aprender</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ===================== FASE 3: CONTEÚDO ===================== -->
+    <div class="phase hidden" id="phaseLearn" data-phase="learn">
+      <div class="learn-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="learn-sidebar" id="learnSidebar">
+          <div class="sidebar-header">
+            <span class="sidebar-lang" id="sidebarLang">Python</span>
+            <span class="sidebar-level" id="sidebarLevel">Iniciante</span>
+          </div>
+
+          <div class="sidebar-progress">
+            <div class="sp-label">
+              <span>Progresso</span>
+              <span id="spPercent">0%</span>
+            </div>
+            <div class="sp-track">
+              <div class="sp-fill" id="spFill"></div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" id="sidebarNav">
+            <!-- gerado pelo JS -->
+          </nav>
+
+          <a href="treino.html" class="sidebar-practice-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Ir para Treino
+          </a>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="learn-content" id="learnContent">
+          <div class="content-topbar">
+            <div class="content-breadcrumb" id="contentBreadcrumb">Módulo 1 · Aula 1</div>
+            <button class="sidebar-toggle" id="sidebarToggle">☰ Menu</button>
+          </div>
+
+          <article class="lesson-article" id="lessonArticle">
+            <!-- gerado pelo JS -->
+          </article>
+
+          <div class="lesson-nav">
+            <button class="lesson-nav-btn" id="prevLesson" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Anterior
+            </button>
+            <button class="lesson-nav-btn primary" id="nextLesson">
+              Próxima
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="completion-modal hidden" id="completionModal">
+            <div class="cm-card">
+              <div class="cm-icon">🎉</div>
+              <h2 class="cm-title">Parabéns, você concluiu esta trilha!</h2>
+              <p class="cm-sub">Você finalizou todos os módulos. Escolha seu próximo passo para continuar evoluindo.</p>
+              <div class="cm-actions">
+                <a href="../index.html" class="cm-btn ghost" id="cmChooseLang">Escolher outra linguagem</a>
+                <a href="treino.html" class="cm-btn primary" id="cmGoTrain">Ir para o treino</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /phaseLearn -->
+
+  </main>
+
+  <div class="site-credits">Desenvolvido por Kauã Felype, Marina Feitoza e Pedro César</div>
+
+  <script src="../js/aprender.js"></script>
+</body>
+</html>
